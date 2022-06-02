@@ -1,4 +1,13 @@
-body div{
-   font-size: 20px;
-   font-weight: bold;
+body div {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('../img/mainbg.jpg') center center / cover no-repeat;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
 }
