@@ -1,18 +1,11 @@
-const path = require('path')
-const HTMLWebapckPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
-module.exports = {
-    mode: 'development',
-    entry: {
-        main: './src/script.js'
-    },
-    output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'build')
-    },
-    plugins: [
-        new HTMLWebapckPlugin({
-            template: './src/index.html'
-        })
-    ]
+const baseConfig = require('./webpack/base.config');
+const pluginsConfig = require('./webpack/plugins.config');
+
+const allConfig = {
+    ...baseConfig,
+    ...pluginsConfig
 }
+
+module.exports = allConfig;
